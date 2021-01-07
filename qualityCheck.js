@@ -40,7 +40,9 @@ qualityCheck = async () => {
             // Search for the annotations that exceed minimum and max values and create either errors or warnings.
             findMinAndMaxBoxSizeAnnotations(staticAnnotation, annotationErrorsThatExceedMaxAndMinSize, annotationWarningsThatExceedMaxAndMinSize); 
             // Search for annotations that have truncation values that are not compatible with image size, x/y values, and width/height values.
-            // validateTruncation(); // Would impliment this with more time
+            // validateTruncation(); // TODO: Impliment this with more time
+            // Search for annotations that have obfuscation values that are not compatible with x/y and width/height values
+            // validateObfuscation(); // TODO: Impliment this with more time
             qualityReportItem = new QualityReportTaskItem(task.id, annotationsWarningsWithMatchingSize, annotationWarningsTrafficControlColor, 
                 annotationWarningsThatExceedMaxAndMinSize, annotationErrorsThatExceedMaxAndMinSize);
         }
@@ -65,6 +67,7 @@ findSameSizeAnnotations = (staticAnnotation, taskAnnotations, i, annotationsWarn
     }
 }
 
+//functions call in findSameSizeAnnotations()
 isBoxSameSize = (itterableAnnotation, staticAnnotation) => {
     return itterableAnnotation.width === staticAnnotation.width && itterableAnnotation.height == staticAnnotation.height;
 }
@@ -107,6 +110,10 @@ validateTruncation = () => {
     //TODO: validate that truncation values are practical given image size, x/y, and width/height values
 }
 
+validateObfuscation = () => {
+    //TODO: validate that obfuscation values are practical given x/y and width/height values
+}
+
 writeToLocalJsonFile = (json) => {
     const fileName = "./qualityReport.json";
     fs.writeFile(fileName, JSON.stringify(json), (err) => {
@@ -119,11 +126,10 @@ writeToLocalJsonFile = (json) => {
 }
 
 qualityCheck();//This invocation runs the whole script.
-// let jsonBody = await qualityCheck();
-// console.log("json body", jsonBody)
-// writeToLocalJsonFile((async () => {return await })());
 //TODO: inputs should allow for queries of api by date
 //TODO: impliment rate limiting so as not overload the api
+//TODO: add checking for truncation values
+//TODO: add checking for obfuscation values
 
 //1) Max size check - throw a warn if H or W exceed 100
 // Possible Quality check item for 5f127f5f3a6b100017232099 - https://dashboard.scale.com/audit?taskId=5f127f5f3a6b100017232099
