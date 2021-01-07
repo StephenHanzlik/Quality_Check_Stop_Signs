@@ -1,0 +1,3939 @@
+{
+    "docs": [
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5fd1d2cdd972a5002de671a1",
+        "task_id": "5fd1d2cdd972a5002de671a1",
+        "created_at": "2020-12-10T07:48:29.698Z",
+        "callback_url": "https://www.example.com/callback",
+        "type": "segmentannotation",
+        "status": "pending",
+        "instruction": "Please label each region carefully.",
+        "params": {
+          "attachment": "https://i.imgur.com/SudOKhq.jpg",
+          "attachment_type": "image",
+          "labels": [
+            "vehicle"
+          ],
+          "annotation_attributes": {
+            "key": {
+              "description": "Is the vehicle moving?",
+              "type": "category"
+            }
+          },
+          "allow_unlabeled": false,
+          "allow_parent_labels": false
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "processed_attachments": [],
+        "project": "Scale AI_default_segmentannotation",
+        "updated_at": "2020-12-10T07:57:09.409Z",
+        "work_started": false
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5fd00a28e82f6f002c796ee6",
+        "task_id": "5fd00a28e82f6f002c796ee6",
+        "created_at": "2020-12-08T23:20:08.385Z",
+        "completed_at": "2020-12-08T23:20:57.564Z",
+        "callback_url": "https://example.com/callback",
+        "type": "imageannotation",
+        "status": "completed",
+        "instruction": "I want to take images like the one below and figure out if thereâ€™s a traffic light in the image, and if so, what the state of the traffic light is.",
+        "params": {
+          "attachment": "https://www.driveandstayalive.com/wp-content/uploads/pedestrians-aaa_intersection-ll-box.jpg",
+          "attachment_type": "image",
+          "annotation_attributes": {
+            "state": {
+              "description": "The state of traffic light (color of the light)",
+              "type": "category",
+              "choices": [
+                "red",
+                "yellow",
+                "green",
+                "off",
+                "unclear"
+              ]
+            },
+            "truncated": {
+              "description": "Mark the closest truncation value.",
+              "type": "category",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            }
+          },
+          "geometries": {
+            "box": {
+              "objects_to_annotate": [
+                "traffic light",
+                "crosswalk signal"
+              ],
+              "min_width": 0,
+              "min_height": 0,
+              "examples": []
+            },
+            "ellipse": {
+              "objects_to_annotate": [
+                "light_in_use"
+              ]
+            }
+          },
+          "padding": 0,
+          "paddingX": 0,
+          "paddingY": 0,
+          "with_labels": true
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "callback_succeeded": false,
+        "processed_attachments": [],
+        "project": "Scale AI_default_imageannotation",
+        "response": {
+          "annotations": [],
+          "is_customer_fix": false
+        },
+        "updated_at": "2020-12-08T23:26:53.640Z",
+        "work_started": true
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5fd009aa7ce6c200177df498",
+        "task_id": "5fd009aa7ce6c200177df498",
+        "created_at": "2020-12-08T23:18:02.076Z",
+        "callback_url": "https://example.com/callback",
+        "type": "imageannotation",
+        "status": "pending",
+        "instruction": "I want to take images like the one below and figure out if thereâ€™s a traffic light in the image, and if so, what the state of the traffic light is.",
+        "params": {
+          "attachment": "https://www.driveandstayalive.com/wp-content/uploads/pedestrians-aaa_intersection-ll-box.jpg",
+          "attachment_type": "image",
+          "annotation_attributes": {
+            "state": {
+              "description": "The state of traffic light (color of the light)",
+              "type": "category",
+              "choices": [
+                "red",
+                "yellow",
+                "green",
+                "off",
+                "unclear"
+              ]
+            }
+          },
+          "geometries": {
+            "box": {
+              "objects_to_annotate": [
+                "traffic light"
+              ],
+              "min_width": 0,
+              "min_height": 0,
+              "examples": []
+            },
+            "ellipse": {
+              "objects_to_annotate": [
+                "light_in_use"
+              ]
+            }
+          },
+          "padding": 0,
+          "paddingX": 0,
+          "paddingY": 0,
+          "with_labels": true
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "processed_attachments": [],
+        "project": "Scale AI_default_imageannotation",
+        "updated_at": "2020-12-08T23:24:49.733Z",
+        "work_started": false
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5fd0088fda36e7003bb1fdb2",
+        "task_id": "5fd0088fda36e7003bb1fdb2",
+        "created_at": "2020-12-08T23:13:19.540Z",
+        "callback_url": "https://example.com/callback",
+        "type": "imageannotation",
+        "status": "pending",
+        "instruction": "I want to take images like the one below and figure out if thereâ€™s a traffic light in the image, and if so, what the state of the traffic light is.",
+        "params": {
+          "attachment": "https://www.driveandstayalive.com/wp-content/uploads/pedestrians-aaa_intersection-ll-box.jpg",
+          "attachment_type": "image",
+          "annotation_attributes": {
+            "state": {
+              "description": "The state of traffic light (color of the light)",
+              "type": "category",
+              "choices": [
+                "red",
+                "yellow",
+                "green",
+                "off",
+                "unclear"
+              ]
+            }
+          },
+          "geometries": {
+            "box": {
+              "objects_to_annotate": [
+                "traffic light"
+              ],
+              "min_width": 0,
+              "min_height": 0,
+              "examples": []
+            }
+          },
+          "padding": 0,
+          "paddingX": 0,
+          "paddingY": 0,
+          "with_labels": true
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "processed_attachments": [],
+        "project": "Scale AI_default_imageannotation",
+        "updated_at": "2020-12-08T23:14:23.447Z",
+        "work_started": false
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f9c823456f00f0033450ab8",
+        "task_id": "5f9c823456f00f0033450ab8",
+        "created_at": "2020-10-30T21:14:28.103Z",
+        "callback_url": "http://www.example.com/callback",
+        "type": "imageannotation",
+        "status": "pending",
+        "instruction": "Annotate the **vehicles** and **pedestrians** in the image.",
+        "params": {
+          "attachment": "https://www.driveandstayalive.com/wp-content/uploads/pedestrians-aaa_intersection-ll-box.jpg",
+          "attachment_type": "image",
+          "annotation_attributes": {
+            "moving": {
+              "description": "Is the vehicle in motion?",
+              "type": "category",
+              "choices": [
+                "yes",
+                "no",
+                "unsure"
+              ]
+            }
+          },
+          "hypothesis": {
+            "annotations": [
+              {
+                "type": "box",
+                "label": "small vehicle",
+                "attributes": {
+                  "moving": "yes"
+                },
+                "left": 2,
+                "top": 4,
+                "width": 3,
+                "height": 5,
+                "uuid": "65ec1f52-5902-4b39-bea9-ab6b4d58ef42"
+              }
+            ]
+          },
+          "geometries": {
+            "box": {
+              "objects_to_annotate": [
+                "small vehicle",
+                "large vehicle"
+              ],
+              "min_height": 10,
+              "min_width": 10,
+              "examples": []
+            },
+            "polygon": {
+              "objects_to_annotate": [
+                "pedestrian"
+              ]
+            },
+            "point": {
+              "objects_to_annotate": [
+                "top of road sign",
+                "top of traffic light"
+              ]
+            }
+          },
+          "with_labels": true
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "processed_attachments": [],
+        "project": "Scale AI_default_imageannotation",
+        "updated_at": "2020-10-30T21:15:16.139Z",
+        "work_started": false
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f9c81fb85003c0024b0f045",
+        "task_id": "5f9c81fb85003c0024b0f045",
+        "created_at": "2020-10-30T21:13:31.853Z",
+        "callback_url": "http://www.example.com/callback",
+        "type": "imageannotation",
+        "status": "pending",
+        "instruction": "Annotate the **vehicles** and **pedestrians** in the image.",
+        "params": {
+          "attachment": "https://www.driveandstayalive.com/wp-content/uploads/pedestrians-aaa_intersection-ll-box.jpg",
+          "attachment_type": "image",
+          "annotation_attributes": {
+            "moving": {
+              "description": "Is the vehicle in motion?",
+              "type": "category",
+              "choices": [
+                "yes",
+                "no",
+                "unsure"
+              ]
+            }
+          },
+          "hypothesis": {
+            "annotations": [
+              {
+                "type": "box",
+                "label": "small vehicle",
+                "attributes": {
+                  "moving": "yes"
+                },
+                "left": 2,
+                "top": 4,
+                "width": 3,
+                "height": 5,
+                "uuid": "65ec1f52-5902-4b39-bea9-ab6b4d58ef42"
+              }
+            ]
+          },
+          "geometries": {
+            "box": {
+              "objects_to_annotate": [
+                "small vehicle",
+                "large vehicle"
+              ],
+              "min_height": 10,
+              "min_width": 10,
+              "examples": []
+            },
+            "polygon": {
+              "objects_to_annotate": [
+                "pedestrian"
+              ]
+            },
+            "point": {
+              "objects_to_annotate": [
+                "top of road sign",
+                "top of traffic light"
+              ]
+            }
+          },
+          "with_labels": true
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "processed_attachments": [],
+        "project": "Scale AI_default_imageannotation",
+        "updated_at": "2020-10-30T21:14:47.893Z",
+        "work_started": false
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f9c81ea17e0790024d0e5c4",
+        "task_id": "5f9c81ea17e0790024d0e5c4",
+        "created_at": "2020-10-30T21:13:14.069Z",
+        "callback_url": "http://www.example.com/callback",
+        "type": "imageannotation",
+        "status": "pending",
+        "instruction": "Annotate the **vehicles** and **pedestrians** in the image.",
+        "params": {
+          "attachment": "https://www.driveandstayalive.com/wp-content/uploads/pedestrians-aaa_intersection-ll-box.jpg",
+          "attachment_type": "image",
+          "annotation_attributes": {
+            "moving": {
+              "description": "Is the vehicle in motion?",
+              "type": "category",
+              "choices": [
+                "yes",
+                "no",
+                "unsure"
+              ]
+            }
+          },
+          "hypothesis": {
+            "annotations": [
+              {
+                "type": "box",
+                "label": "small vehicle",
+                "attributes": {
+                  "moving": "yes"
+                },
+                "left": 2,
+                "top": 4,
+                "width": 3,
+                "height": 5,
+                "uuid": "65ec1f52-5902-4b39-bea9-ab6b4d58ef42"
+              }
+            ]
+          },
+          "geometries": {
+            "box": {
+              "objects_to_annotate": [
+                "small vehicle",
+                "large vehicle"
+              ],
+              "min_height": 10,
+              "min_width": 10,
+              "examples": []
+            },
+            "polygon": {
+              "objects_to_annotate": [
+                "pedestrian"
+              ]
+            },
+            "point": {
+              "objects_to_annotate": [
+                "top of road sign",
+                "top of traffic light"
+              ]
+            }
+          },
+          "with_labels": true
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "processed_attachments": [],
+        "project": "Scale AI_default_imageannotation",
+        "updated_at": "2020-10-30T21:14:16.469Z",
+        "work_started": false
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f9c81c4223aff0010b2815c",
+        "task_id": "5f9c81c4223aff0010b2815c",
+        "created_at": "2020-10-30T21:12:36.778Z",
+        "callback_url": "http://www.example.com/callback",
+        "type": "imageannotation",
+        "status": "pending",
+        "instruction": "Annotate the **vehicles** and **pedestrians** in the image.",
+        "params": {
+          "attachment": "https://www.driveandstayalive.com/wp-content/uploads/pedestrians-aaa_intersection-ll-box.jpg",
+          "attachment_type": "image",
+          "annotation_attributes": {
+            "moving": {
+              "description": "Is the vehicle in motion?",
+              "type": "category",
+              "choices": [
+                "yes",
+                "no",
+                "unsure"
+              ]
+            }
+          },
+          "hypothesis": {
+            "annotations": [
+              {
+                "type": "box",
+                "label": "small vehicle",
+                "attributes": {
+                  "moving": "yes"
+                },
+                "left": 2,
+                "top": 4,
+                "width": 3,
+                "height": 5,
+                "uuid": "65ec1f52-5902-4b39-bea9-ab6b4d58ef42"
+              }
+            ]
+          },
+          "geometries": {
+            "box": {
+              "objects_to_annotate": [
+                "small vehicle",
+                "large vehicle"
+              ],
+              "min_height": 10,
+              "min_width": 10,
+              "examples": []
+            },
+            "polygon": {
+              "objects_to_annotate": [
+                "pedestrian"
+              ]
+            },
+            "point": {
+              "objects_to_annotate": [
+                "top of road sign",
+                "top of traffic light"
+              ]
+            }
+          },
+          "with_labels": true
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "processed_attachments": [],
+        "project": "Scale AI_default_imageannotation",
+        "updated_at": "2020-10-30T21:13:07.063Z",
+        "work_started": false
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f9c8199851bfd0039d0e134",
+        "task_id": "5f9c8199851bfd0039d0e134",
+        "created_at": "2020-10-30T21:11:53.868Z",
+        "callback_url": "http://www.example.com/callback",
+        "type": "imageannotation",
+        "status": "pending",
+        "instruction": "Annotate the **vehicles** and **pedestrians** in the image.",
+        "params": {
+          "attachment": "https://www.driveandstayalive.com/wp-content/uploads/pedestrians-aaa_intersection-ll-box.jpg",
+          "attachment_type": "image",
+          "annotation_attributes": {
+            "moving": {
+              "description": "Is the vehicle in motion?",
+              "type": "category",
+              "choices": [
+                "yes",
+                "no",
+                "unsure"
+              ]
+            }
+          },
+          "hypothesis": {
+            "annotations": [
+              {
+                "type": "box",
+                "label": "small vehicle",
+                "attributes": {
+                  "moving": "yes"
+                },
+                "left": 2,
+                "top": 4,
+                "width": 3,
+                "height": 5,
+                "uuid": "65ec1f52-5902-4b39-bea9-ab6b4d58ef42"
+              }
+            ]
+          },
+          "geometries": {
+            "box": {
+              "objects_to_annotate": [
+                "small vehicle",
+                "large vehicle"
+              ],
+              "min_height": 10,
+              "min_width": 10,
+              "examples": []
+            },
+            "polygon": {
+              "objects_to_annotate": [
+                "pedestrian"
+              ]
+            },
+            "point": {
+              "objects_to_annotate": [
+                "top of road sign",
+                "top of traffic light"
+              ]
+            }
+          },
+          "with_labels": true
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "processed_attachments": [],
+        "project": "Scale AI_default_imageannotation",
+        "updated_at": "2020-10-30T21:12:19.000Z",
+        "work_started": false
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f9c8138d1a56a00324d1db9",
+        "task_id": "5f9c8138d1a56a00324d1db9",
+        "created_at": "2020-10-30T21:10:16.910Z",
+        "callback_url": "http://www.example.com/callback",
+        "type": "imageannotation",
+        "status": "pending",
+        "instruction": "Annotate the **vehicles** and **pedestrians** in the image.",
+        "params": {
+          "attachment": "https://www.driveandstayalive.com/wp-content/uploads/pedestrians-aaa_intersection-ll-box.jpg",
+          "attachment_type": "image",
+          "annotation_attributes": {
+            "moving": {
+              "description": "Is the vehicle in motion?",
+              "type": "category",
+              "choices": [
+                "yes",
+                "no",
+                "unsure"
+              ]
+            }
+          },
+          "hypothesis": {
+            "annotations": [
+              {
+                "type": "box",
+                "label": "small vehicle",
+                "attributes": {
+                  "moving": "yes"
+                },
+                "left": 2,
+                "top": 4,
+                "width": 3,
+                "height": 5,
+                "uuid": "65ec1f52-5902-4b39-bea9-ab6b4d58ef42"
+              }
+            ]
+          },
+          "geometries": {
+            "box": {
+              "objects_to_annotate": [
+                "small vehicle",
+                "large vehicle"
+              ],
+              "min_height": 10,
+              "min_width": 10,
+              "examples": []
+            },
+            "polygon": {
+              "objects_to_annotate": [
+                "pedestrian"
+              ]
+            },
+            "point": {
+              "objects_to_annotate": [
+                "top of road sign",
+                "top of traffic light"
+              ]
+            }
+          },
+          "with_labels": true
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "processed_attachments": [],
+        "project": "Scale AI_default_imageannotation",
+        "updated_at": "2020-10-30T21:10:41.159Z",
+        "work_started": false
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f80b456bc3489002b8dbb1d",
+        "task_id": "5f80b456bc3489002b8dbb1d",
+        "created_at": "2020-10-09T19:04:54.183Z",
+        "completed_at": "2020-10-09T19:04:55.586Z",
+        "callback_url": "http://example.com/callback",
+        "type": "lidarannotation",
+        "status": "error",
+        "instruction": "Please label all cars, pedestrians, and cyclists in each frame.",
+        "params": {
+          "attachment_type": "json",
+          "attachments": [
+            "https://fe-hiring.s3-us-west-2.amazonaws.com/mde/frames/frame_0.json",
+            "https://fe-hiring.s3-us-west-2.amazonaws.com/mde/frames/frame_1.json",
+            "https://fe-hiring.s3-us-west-2.amazonaws.com/mde/frames/frame_2.json"
+          ],
+          "labels": [
+            "car",
+            "pedestrian",
+            "cyclist"
+          ],
+          "max_distance_meters": 30,
+          "meters_per_unit": 1,
+          "labeling_sample_rate": 1
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "callback_succeeded": false,
+        "processed_attachments": [],
+        "project": "Scale AI_default_lidarannotation",
+        "response": {
+          "error": "One or more attachments could not be processed",
+          "frames": [
+            {
+              "frame": 2,
+              "message": "The resource at https://fe-hiring.s3-us-west-2.amazonaws.com/mde/frames/frame_1.json could not be downloaded: Status code 403",
+              "attachment": {
+                "statusCode": 403,
+                "url": "https://fe-hiring.s3-us-west-2.amazonaws.com/mde/frames/frame_1.json"
+              }
+            },
+            {
+              "frame": 3,
+              "message": "The resource at https://fe-hiring.s3-us-west-2.amazonaws.com/mde/frames/frame_2.json could not be downloaded: Status code 403",
+              "attachment": {
+                "statusCode": 403,
+                "url": "https://fe-hiring.s3-us-west-2.amazonaws.com/mde/frames/frame_2.json"
+              }
+            },
+            {
+              "frame": 1,
+              "message": "The resource at https://fe-hiring.s3-us-west-2.amazonaws.com/mde/frames/frame_0.json could not be downloaded: Status code 403",
+              "attachment": {
+                "statusCode": 403,
+                "url": "https://fe-hiring.s3-us-west-2.amazonaws.com/mde/frames/frame_0.json"
+              }
+            }
+          ],
+          "is_customer_fix": false
+        },
+        "updated_at": "2020-10-09T19:04:55.917Z",
+        "work_started": false
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f2c446d37de6f00162383a0",
+        "task_id": "5f2c446d37de6f00162383a0",
+        "created_at": "2020-08-06T17:57:01.382Z",
+        "completed_at": "2020-08-06T17:57:05.358Z",
+        "callback_url": "http://example.com/callback",
+        "type": "lidarannotation",
+        "status": "error",
+        "instruction": "Please label all cars, pedestrians, and cyclists in each frame.",
+        "params": {
+          "attachment_type": "json",
+          "attachments": [
+            "https://test124124.s3-ca-central-1.amazonaws.com/SrikanthSrinivas/frames/frame_0.json",
+            "https://test124124.s3-ca-central-1.amazonaws.com/SrikanthSrinivas/frames/frame_1.json",
+            "https://test124124.s3-ca-central-1.amazonaws.com/SrikanthSrinivas/frames/frame_2.json"
+          ],
+          "labels": [
+            "car",
+            "pedestrian",
+            "cyclist"
+          ],
+          "max_distance_meters": 30,
+          "meters_per_unit": 1,
+          "labeling_sample_rate": 1
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "callback_succeeded": false,
+        "processed_attachments": [],
+        "project": "Scale AI_default_lidarannotation",
+        "response": {
+          "error": "One or more attachments could not be processed",
+          "frames": [
+            {
+              "frame": 3,
+              "message": "The resource at https://test124124.s3-ca-central-1.amazonaws.com/SrikanthSrinivas/frames/frame_2.json could not be downloaded: Status code 403",
+              "attachment": {
+                "statusCode": 403,
+                "url": "https://test124124.s3-ca-central-1.amazonaws.com/SrikanthSrinivas/frames/frame_2.json"
+              }
+            },
+            {
+              "frame": 1,
+              "message": "The resource at https://s3.us-west-2.amazonaws.com/fe-hiring/SrikanthSrinivas/images/0000000000.png could not be downloaded: Status code 403",
+              "attachment": {
+                "statusCode": 403,
+                "url": "https://s3.us-west-2.amazonaws.com/fe-hiring/SrikanthSrinivas/images/0000000000.png"
+              }
+            },
+            {
+              "frame": 2,
+              "message": "The resource at https://test124124.s3-ca-central-1.amazonaws.com/SrikanthSrinivas/frames/frame_1.json could not be downloaded: Status code 403",
+              "attachment": {
+                "statusCode": 403,
+                "url": "https://test124124.s3-ca-central-1.amazonaws.com/SrikanthSrinivas/frames/frame_1.json"
+              }
+            }
+          ],
+          "is_customer_fix": false
+        },
+        "updated_at": "2020-08-06T17:57:05.604Z",
+        "work_started": false
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f2c19c1121fed00102a5143",
+        "task_id": "5f2c19c1121fed00102a5143",
+        "created_at": "2020-08-06T14:54:57.995Z",
+        "completed_at": "2020-08-06T14:55:01.994Z",
+        "callback_url": "http://example.com/callback",
+        "type": "lidarannotation",
+        "status": "error",
+        "instruction": "Please label all cars, pedestrians, and cyclists in each frame.",
+        "params": {
+          "attachment_type": "json",
+          "attachments": [
+            "https://fe-hiring.s3-us-west-2.amazonaws.com/SrikanthSrinivas/frames/frame_0.json",
+            "https://fe-hiring.s3-us-west-2.amazonaws.com/SrikanthSrinivas/frames/frame_1.json",
+            "https://fe-hiring.s3-us-west-2.amazonaws.com/SrikanthSrinivas/frames/frame_2.json"
+          ],
+          "labels": [
+            "car",
+            "pedestrian",
+            "cyclist"
+          ],
+          "max_distance_meters": 30,
+          "meters_per_unit": 1,
+          "labeling_sample_rate": 1
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "callback_succeeded": false,
+        "processed_attachments": [],
+        "project": "Scale AI_default_lidarannotation",
+        "response": {
+          "error": "One or more attachments could not be processed",
+          "frames": [
+            {
+              "frame": 3,
+              "message": "The resource at https://fe-hiring.s3-us-west-2.amazonaws.com/SrikanthSrinivas/frames/frame_2.json could not be downloaded: Status code 403",
+              "attachment": {
+                "statusCode": 403,
+                "url": "https://fe-hiring.s3-us-west-2.amazonaws.com/SrikanthSrinivas/frames/frame_2.json"
+              }
+            },
+            {
+              "frame": 2,
+              "message": "The resource at https://fe-hiring.s3-us-west-2.amazonaws.com/SrikanthSrinivas/frames/frame_1.json could not be downloaded: Status code 403",
+              "attachment": {
+                "statusCode": 403,
+                "url": "https://fe-hiring.s3-us-west-2.amazonaws.com/SrikanthSrinivas/frames/frame_1.json"
+              }
+            },
+            {
+              "frame": 1,
+              "message": "The resource at https://fe-hiring.s3-us-west-2.amazonaws.com/SrikanthSrinivas/frames/frame_0.json could not be downloaded: Status code 403",
+              "attachment": {
+                "statusCode": 403,
+                "url": "https://fe-hiring.s3-us-west-2.amazonaws.com/SrikanthSrinivas/frames/frame_0.json"
+              }
+            }
+          ],
+          "is_customer_fix": false
+        },
+        "updated_at": "2020-08-06T14:57:11.494Z",
+        "work_started": false
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f127f6f26831d0010e985e5",
+        "task_id": "5f127f6f26831d0010e985e5",
+        "created_at": "2020-07-18T04:49:51.129Z",
+        "completed_at": "2020-07-18T05:03:26.917Z",
+        "callback_url": "https://example.com/callback",
+        "type": "annotation",
+        "status": "completed",
+        "instruction": "Draw a tight box around each object.",
+        "params": {
+          "attachment": "https://observesign.s3-us-west-2.amazonaws.com/traffic_sign_1.jpg",
+          "attachment_type": "image",
+          "objects_to_annotate": [
+            "traffic_control_sign",
+            "construction_sign",
+            "information_sign",
+            "policy_sign",
+            "non_visible_face"
+          ],
+          "with_labels": true,
+          "min_width": 0,
+          "min_height": 0,
+          "examples": [],
+          "annotation_attributes": {
+            "occlusion": {
+              "description": "What percent of the object is occluded?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "truncation": {
+              "description": "What percent of the object is truncated?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "background_color": {
+              "description": "What color is the background of the sign?",
+              "choices": [
+                "white",
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "blue",
+                "other",
+                "not_applicable"
+              ]
+            }
+          }
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "callback_succeeded": false,
+        "processed_attachments": [],
+        "project": "Traffic Sign Detection",
+        "customer_review_status": "accepted",
+        "customer_review_comments": [
+          "",
+          ""
+        ],
+        "prior_responses": [],
+        "response": {
+          "annotations": [
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "50fde071-d81d-4a21-8315-e831d5263b8f",
+              "width": 12,
+              "height": 17,
+              "geometry": "box",
+              "left": 1173,
+              "top": 460
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "green"
+              },
+              "uuid": "c436c3c5-fb04-43b9-9679-30e0345c0837",
+              "width": 95,
+              "height": 54,
+              "geometry": "box",
+              "left": 893,
+              "top": 316
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "green"
+              },
+              "uuid": "0e8ce7a9-d203-4618-99be-8a63a10514e0",
+              "width": 114,
+              "height": 100,
+              "geometry": "box",
+              "left": 690,
+              "top": 294
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "yellow"
+              },
+              "uuid": "ada7893a-3ee1-4d69-b06b-87240a9522cd",
+              "width": 15,
+              "height": 14,
+              "geometry": "box",
+              "left": 874,
+              "top": 446
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "green"
+              },
+              "uuid": "2deb7dd7-cf6d-4080-8a29-cdc085541b49",
+              "width": 11,
+              "height": 7,
+              "geometry": "box",
+              "left": 748,
+              "top": 428
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "green"
+              },
+              "uuid": "1e418b05-398c-42a2-95b5-b88da7f9a145",
+              "width": 11,
+              "height": 9,
+              "geometry": "box",
+              "left": 728,
+              "top": 425
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "50%",
+                "truncation": "0%",
+                "background_color": "green"
+              },
+              "uuid": "89e6b03e-1e6c-4ca3-9bc5-2660c1ddd768",
+              "width": 34,
+              "height": 13,
+              "geometry": "box",
+              "left": 659,
+              "top": 435
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "yellow"
+              },
+              "uuid": "df8c17ab-5055-480f-a75b-70561997b60b",
+              "width": 44,
+              "height": 41,
+              "geometry": "box",
+              "left": 651,
+              "top": 440
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "green"
+              },
+              "uuid": "78878895-cd3d-41ee-a980-f113f189fe6a",
+              "width": 37,
+              "height": 15,
+              "geometry": "box",
+              "left": 612,
+              "top": 436
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "5d0f3488-135c-4757-b121-43cce10726c8",
+              "width": 29,
+              "height": 22,
+              "geometry": "box",
+              "left": 574,
+              "top": 429
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "1076a071-ba89-4bf5-8249-aa5e641992e4",
+              "width": 9,
+              "height": 11,
+              "geometry": "box",
+              "left": 381,
+              "top": 408
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "25%",
+                "background_color": "not_applicable",
+                "truncation": "0%"
+              },
+              "uuid": "a9cc3478-b9f9-480b-bd32-cbb9c4e10af6",
+              "width": 9,
+              "height": 9,
+              "geometry": "box",
+              "left": 429,
+              "top": 415
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "50%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "1b048402-5527-4b89-8a76-09fbe61735a0",
+              "width": 21,
+              "height": 13,
+              "geometry": "box",
+              "left": 452,
+              "top": 411
+            }
+          ],
+          "is_customer_fix": false
+        },
+        "customer_reviewed_by": "fieldengineering+observesign@scale.com",
+        "customer_audit_time_secs": 93.192,
+        "customer_audited_at": "2020-11-11T04:48:29.551Z",
+        "audits": [
+          {
+            "audited_by": "fieldengineering+observesign@scale.com",
+            "audited_at": "2020-11-11T04:48:29.551Z",
+            "audit_time_secs": 93.192,
+            "audit_result": "accepted",
+            "audit_source": "customer"
+          },
+          {
+            "audited_by": "fieldengineering+observesign@scale.com",
+            "audited_at": "2020-11-09T23:20:44.665Z",
+            "audit_time_secs": 22.009,
+            "audit_result": "accepted",
+            "audit_source": "customer"
+          }
+        ],
+        "updated_at": "2021-01-03T00:24:40.176Z",
+        "work_started": true
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f127f6c3a6b1000172320ad",
+        "task_id": "5f127f6c3a6b1000172320ad",
+        "created_at": "2020-07-18T04:49:48.480Z",
+        "completed_at": "2020-07-18T05:18:52.138Z",
+        "callback_url": "https://example.com/callback",
+        "type": "annotation",
+        "status": "completed",
+        "instruction": "Draw a tight box around each object.",
+        "params": {
+          "attachment": "https://observesign.s3-us-west-2.amazonaws.com/traffic_sign_2.jpg",
+          "attachment_type": "image",
+          "objects_to_annotate": [
+            "traffic_control_sign",
+            "construction_sign",
+            "information_sign",
+            "policy_sign",
+            "non_visible_face"
+          ],
+          "with_labels": true,
+          "min_width": 0,
+          "min_height": 0,
+          "examples": [],
+          "annotation_attributes": {
+            "occlusion": {
+              "description": "What percent of the object is occluded?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "truncation": {
+              "description": "What percent of the object is truncated?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "background_color": {
+              "description": "What color is the background of the sign?",
+              "choices": [
+                "white",
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "blue",
+                "other",
+                "not_applicable"
+              ]
+            }
+          }
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "callback_succeeded": false,
+        "processed_attachments": [],
+        "project": "Traffic Sign Detection",
+        "customer_review_status": "rejected",
+        "customer_review_comments": [
+          "",
+          "Difference between labeling \"traffic_control_sign\" and \"non_visible_face\". Although I cannot see the face, I can tell its a \"traffic_control_sign\". How should I label? Probably just need be consistent."
+        ],
+        "prior_responses": [],
+        "response": {
+          "annotations": [
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "0565b84a-8a1b-4486-ad36-fef148894b03",
+              "width": 14,
+              "height": 40,
+              "geometry": "box",
+              "left": 559,
+              "top": 503
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "839ffc1f-b6cc-4d31-8524-dbb3d8fde3ee",
+              "width": 29,
+              "height": 28,
+              "geometry": "box",
+              "left": 546,
+              "top": 581
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "4972bf86-e345-4a0f-8bb5-9d2a86569b3e",
+              "width": 12,
+              "height": 32,
+              "geometry": "box",
+              "left": 734,
+              "top": 619
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "8f9e0df3-7534-46ab-b7b4-dbae311c88cd",
+              "width": 13,
+              "height": 16,
+              "geometry": "box",
+              "left": 718,
+              "top": 664
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "dda85426-ba5f-4910-b92b-e50fc0bfb793",
+              "width": 7,
+              "height": 10,
+              "geometry": "box",
+              "left": 914,
+              "top": 672
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "green"
+              },
+              "uuid": "c8dd26d1-8cc5-4d96-8012-23b744871fcc",
+              "width": 14,
+              "height": 5,
+              "geometry": "box",
+              "left": 945,
+              "top": 681
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "75%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "0bc2ab2c-16b0-461e-8866-08f3bdc87238",
+              "width": 16,
+              "height": 39,
+              "geometry": "box",
+              "left": 1151,
+              "top": 542
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "green"
+              },
+              "uuid": "2d60d1ad-81fa-4135-afb1-9f43fc6f4a13",
+              "width": 48,
+              "height": 15,
+              "geometry": "box",
+              "left": 1185,
+              "top": 572
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "fd7a83ed-cbcc-4b98-8746-98c7551cb4a2",
+              "width": 33,
+              "height": 12,
+              "geometry": "box",
+              "left": 1318,
+              "top": 685
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "ec2b36f3-75d1-42fe-adea-000dd0064e76",
+              "width": 15,
+              "height": 11,
+              "geometry": "box",
+              "left": 1291,
+              "top": 677
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "c1feef88-40a5-4275-b631-8cdbd554cb08",
+              "width": 11,
+              "height": 29,
+              "geometry": "box",
+              "left": 1328,
+              "top": 654
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "e0294801-e987-4549-9bea-23d5b9a8622b",
+              "width": 19,
+              "height": 23,
+              "geometry": "box",
+              "left": 1771,
+              "top": 649
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "665c4b67-3600-4523-b780-340e55adcad4",
+              "width": 19,
+              "height": 24,
+              "geometry": "box",
+              "left": 1742,
+              "top": 647
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "5da3cb2e-5cf3-4919-9511-bccbbbaf163d",
+              "width": 32,
+              "height": 46,
+              "geometry": "box",
+              "left": 1748,
+              "top": 532
+            }
+          ],
+          "is_customer_fix": false
+        },
+        "customer_reviewed_by": "fieldengineering+observesign@scale.com",
+        "customer_audit_time_secs": 1089.49,
+        "customer_audited_at": "2020-12-08T18:12:46.313Z",
+        "audits": [
+          {
+            "audited_by": "fieldengineering+observesign@scale.com",
+            "audited_at": "2020-12-08T18:12:46.313Z",
+            "audit_time_secs": 1089.49,
+            "audit_result": "rejected",
+            "audit_source": "customer"
+          },
+          {
+            "audited_by": "fieldengineering+observesign@scale.com",
+            "audited_at": "2020-10-15T16:22:53.006Z",
+            "audit_time_secs": 76.604,
+            "audit_result": "accepted",
+            "audit_source": "customer"
+          }
+        ],
+        "updated_at": "2021-01-02T02:20:48.529Z",
+        "work_started": true
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f127f699740b80017f9b170",
+        "task_id": "5f127f699740b80017f9b170",
+        "created_at": "2020-07-18T04:49:45.731Z",
+        "completed_at": "2020-07-18T05:22:44.489Z",
+        "callback_url": "https://example.com/callback",
+        "type": "annotation",
+        "status": "completed",
+        "instruction": "Draw a tight box around each object.",
+        "params": {
+          "attachment": "https://observesign.s3-us-west-2.amazonaws.com/traffic_sign_3.jpg",
+          "attachment_type": "image",
+          "objects_to_annotate": [
+            "traffic_control_sign",
+            "construction_sign",
+            "information_sign",
+            "policy_sign",
+            "non_visible_face"
+          ],
+          "with_labels": true,
+          "min_width": 0,
+          "min_height": 0,
+          "examples": [],
+          "annotation_attributes": {
+            "occlusion": {
+              "description": "What percent of the object is occluded?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "truncation": {
+              "description": "What percent of the object is truncated?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "background_color": {
+              "description": "What color is the background of the sign?",
+              "choices": [
+                "white",
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "blue",
+                "other",
+                "not_applicable"
+              ]
+            }
+          }
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "callback_succeeded": false,
+        "processed_attachments": [],
+        "project": "Traffic Sign Detection",
+        "customer_review_status": "rejected",
+        "customer_review_comments": [
+          "All the traffic control signs are mis-labeled. These are not traffic signs in general."
+        ],
+        "prior_responses": [],
+        "response": {
+          "annotations": [
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "49a40bd1-788b-4741-b20f-10577c13f6c3",
+              "width": 54,
+              "height": 58,
+              "geometry": "box",
+              "left": 1441,
+              "top": 565
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "fdae05b8-a506-4a8f-9e5b-44006f24b1f7",
+              "width": 54,
+              "height": 72,
+              "geometry": "box",
+              "left": 1439,
+              "top": 627
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "red"
+              },
+              "uuid": "da493933-bb23-4179-a3ce-16c2b8b14d8c",
+              "width": 29,
+              "height": 41,
+              "geometry": "box",
+              "left": 374,
+              "top": 589
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "red"
+              },
+              "uuid": "15e7ee7c-ae01-434d-a0b7-54d4403d5533",
+              "width": 28,
+              "height": 38,
+              "geometry": "box",
+              "left": 535,
+              "top": 591
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "red"
+              },
+              "uuid": "e341eb36-7501-4413-9609-6d2244511000",
+              "width": 25,
+              "height": 43,
+              "geometry": "box",
+              "left": 647,
+              "top": 613
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "red"
+              },
+              "uuid": "2b0b1670-30be-4573-9fa3-c1aa9b51802a",
+              "width": 34,
+              "height": 59,
+              "geometry": "box",
+              "left": 119,
+              "top": 588
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "0fd6b443-d9e2-4d7d-af67-968cc78bda6f",
+              "width": 40,
+              "height": 27,
+              "geometry": "box",
+              "left": 1052,
+              "top": 596
+            }
+          ],
+          "is_customer_fix": false
+        },
+        "customer_reviewed_by": "fieldengineering+observesign@scale.com",
+        "customer_audit_time_secs": 99.563,
+        "customer_audited_at": "2020-11-10T01:32:33.540Z",
+        "audits": [
+          {
+            "audited_by": "fieldengineering+observesign@scale.com",
+            "audited_at": "2020-11-10T01:32:33.540Z",
+            "audit_time_secs": 99.563,
+            "audit_result": "rejected",
+            "audit_source": "customer"
+          }
+        ],
+        "updated_at": "2021-01-01T05:05:05.370Z",
+        "work_started": true
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f127f671ab28b001762c204",
+        "task_id": "5f127f671ab28b001762c204",
+        "created_at": "2020-07-18T04:49:43.128Z",
+        "completed_at": "2020-07-18T05:44:51.757Z",
+        "callback_url": "https://example.com/callback",
+        "type": "annotation",
+        "status": "completed",
+        "instruction": "Draw a tight box around each object.",
+        "params": {
+          "attachment": "https://observesign.s3-us-west-2.amazonaws.com/traffic_sign_4.jpg",
+          "attachment_type": "image",
+          "objects_to_annotate": [
+            "traffic_control_sign",
+            "construction_sign",
+            "information_sign",
+            "policy_sign",
+            "non_visible_face"
+          ],
+          "with_labels": true,
+          "min_width": 0,
+          "min_height": 0,
+          "examples": [],
+          "annotation_attributes": {
+            "occlusion": {
+              "description": "What percent of the object is occluded?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "truncation": {
+              "description": "What percent of the object is truncated?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "background_color": {
+              "description": "What color is the background of the sign?",
+              "choices": [
+                "white",
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "blue",
+                "other",
+                "not_applicable"
+              ]
+            }
+          }
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "callback_succeeded": false,
+        "processed_attachments": [],
+        "project": "Traffic Sign Detection",
+        "customer_review_status": "rejected",
+        "customer_review_comments": [
+          "",
+          "Overlapping signs"
+        ],
+        "prior_responses": [],
+        "response": {
+          "annotations": [
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "b4efc369-f34e-4e55-97b3-fc380ad4dcbd",
+              "width": 66,
+              "height": 109,
+              "geometry": "box",
+              "left": 1854,
+              "top": 436
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "07acd587-b5e9-4917-a4fe-28f01674788b",
+              "width": 73,
+              "height": 78,
+              "geometry": "box",
+              "left": 1810,
+              "top": 503
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "889b97d6-d5c8-4694-af23-cbfb5b206902",
+              "width": 73,
+              "height": 72,
+              "geometry": "box",
+              "left": 1710,
+              "top": 502
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "83873098-643e-4c7d-8e09-aa064577a7c4",
+              "width": 23,
+              "height": 71,
+              "geometry": "box",
+              "left": 1623,
+              "top": 508
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "858e3de8-a89c-47ae-b993-ef74f20087e5",
+              "width": 88,
+              "height": 88,
+              "geometry": "box",
+              "left": 1590,
+              "top": 491
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "blue"
+              },
+              "uuid": "334459e5-a06e-42ba-b757-ce6c88f72769",
+              "width": 58,
+              "height": 58,
+              "geometry": "box",
+              "left": 1266,
+              "top": 599
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "57cfe77b-b389-46ca-943d-5034c9380095",
+              "width": 12,
+              "height": 42,
+              "geometry": "box",
+              "left": 1227,
+              "top": 607
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "8b1dcb55-553d-498e-bf7d-65b6737fa59e",
+              "width": 50,
+              "height": 51,
+              "geometry": "box",
+              "left": 1206,
+              "top": 599
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "c40b230e-d938-4d56-a2f5-0f0cc60242f1",
+              "width": 18,
+              "height": 21,
+              "geometry": "box",
+              "left": 1138,
+              "top": 750
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "8d84dc05-e65c-458b-9d98-fac144e5eca7",
+              "width": 32,
+              "height": 11,
+              "geometry": "box",
+              "left": 1112,
+              "top": 736
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "10730b6d-cf0a-4479-a0e3-50f6b728ed4b",
+              "width": 16,
+              "height": 17,
+              "geometry": "box",
+              "left": 1106,
+              "top": 744
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "aa4e95c4-dedf-4083-8309-f2060151a122",
+              "width": 28,
+              "height": 28,
+              "geometry": "box",
+              "left": 1096,
+              "top": 663
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "1989cfb0-05b1-4631-84b0-f01c7e5c46f7",
+              "width": 22,
+              "height": 11,
+              "geometry": "box",
+              "left": 1098,
+              "top": 692
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "104e88f5-4d34-4032-8f79-aeece7365014",
+              "width": 13,
+              "height": 34,
+              "geometry": "box",
+              "left": 1026,
+              "top": 671
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "26525d34-d428-403c-8fa5-d153d354f335",
+              "width": 19,
+              "height": 10,
+              "geometry": "box",
+              "left": 1062,
+              "top": 702
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "50%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "64eb36b3-aa8f-4672-8e2c-2504e728187d",
+              "width": 26,
+              "height": 26,
+              "geometry": "box",
+              "left": 1060,
+              "top": 675
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "65cb1e23-507d-458e-9f76-a12e0aa84716",
+              "width": 30,
+              "height": 28,
+              "geometry": "box",
+              "left": 1051,
+              "top": 663
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "09e14631-f788-456e-a988-0b249bf6c3dc",
+              "width": 15,
+              "height": 13,
+              "geometry": "box",
+              "left": 1038,
+              "top": 753
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "fbfc1b02-2493-46e3-829b-729c1b06a538",
+              "width": 18,
+              "height": 17,
+              "geometry": "box",
+              "left": 964,
+              "top": 703
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "553d8f3a-8a91-4834-a415-50b29034aa23",
+              "width": 18,
+              "height": 19,
+              "geometry": "box",
+              "left": 940,
+              "top": 702
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "fe478408-f175-4b8f-a20c-65cedf2b8385",
+              "width": 23,
+              "height": 20,
+              "geometry": "box",
+              "left": 901,
+              "top": 748
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "707eba7e-2015-4aa2-bcce-f712506cdca9",
+              "width": 16,
+              "height": 12,
+              "geometry": "box",
+              "left": 904,
+              "top": 768
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "50%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "00610d41-fd17-4e9a-97ff-6d33e07102ad",
+              "width": 36,
+              "height": 34,
+              "geometry": "box",
+              "left": 602,
+              "top": 661
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "50%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "b6e4e79a-9640-43e0-9c7f-a6094c46b642",
+              "width": 14,
+              "height": 30,
+              "geometry": "box",
+              "left": 585,
+              "top": 611
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "75%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "af326982-eaf5-44c1-92dd-13b6ab715c4d",
+              "width": 41,
+              "height": 39,
+              "geometry": "box",
+              "left": 574,
+              "top": 604
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "000e9def-59a8-4e13-a85a-96ba551dae6f",
+              "width": 53,
+              "height": 57,
+              "geometry": "box",
+              "left": 551,
+              "top": 572
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "06e358df-f426-4239-99c6-df9ba6594d5a",
+              "width": 76,
+              "height": 71,
+              "geometry": "box",
+              "left": 503,
+              "top": 522
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "3c0dbc34-2fdb-4366-87f4-dbc45534a6d0",
+              "width": 21,
+              "height": 57,
+              "geometry": "box",
+              "left": 531,
+              "top": 530
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "b80eb8aa-4d3d-4a8c-b581-3f4eb6c018e3",
+              "width": 107,
+              "height": 105,
+              "geometry": "box",
+              "left": 423,
+              "top": 424
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "b008c68b-57c4-4e1b-a176-40eeb16fd8ef",
+              "width": 90,
+              "height": 91,
+              "geometry": "box",
+              "left": 297,
+              "top": 430
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "992baf1f-026a-4941-805a-e0e9ba6aa685",
+              "width": 88,
+              "height": 86,
+              "geometry": "box",
+              "left": 174,
+              "top": 430
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "0c2ecdda-b441-44db-b1ec-e0295f82cb2d",
+              "width": 64,
+              "height": 66,
+              "geometry": "box",
+              "left": 408,
+              "top": 520
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "84dfe8ae-2872-42c0-a460-1d96565d0d78",
+              "width": 68,
+              "height": 63,
+              "geometry": "box",
+              "left": 325,
+              "top": 522
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "50%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "23982f64-a487-45ba-9114-2e87431f6cda",
+              "width": 44,
+              "height": 42,
+              "geometry": "box",
+              "left": 479,
+              "top": 580
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "50%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "55f17c73-b2ae-4aeb-866e-b296cc881476",
+              "width": 38,
+              "height": 38,
+              "geometry": "box",
+              "left": 508,
+              "top": 599
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "2d072941-cf11-48e9-8d48-3091a37db362",
+              "width": 90,
+              "height": 32,
+              "geometry": "box",
+              "left": 209,
+              "top": 727
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "3fc2afb3-e1fa-4885-a631-482fc42e8ad8",
+              "width": 32,
+              "height": 30,
+              "geometry": "box",
+              "left": 351,
+              "top": 765
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "9ef86fe9-02d8-4330-b566-db92b965e1d4",
+              "width": 41,
+              "height": 42,
+              "geometry": "box",
+              "left": 230,
+              "top": 769
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "d5368f86-488a-4769-afd1-8b75a03e6f65",
+              "width": 35,
+              "height": 45,
+              "geometry": "box",
+              "left": 157,
+              "top": 736
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "22df517a-b4b9-47b6-9785-fcee86cfc1ca",
+              "width": 133,
+              "height": 55,
+              "geometry": "box",
+              "left": 2,
+              "top": 723
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "0d5d4005-3d0e-435e-84f1-83cfae9aaeed",
+              "width": 107,
+              "height": 105,
+              "geometry": "box",
+              "left": 425,
+              "top": 424
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "c2cbfd02-b009-4990-ac7c-f01cc20f39c5",
+              "width": 107,
+              "height": 105,
+              "geometry": "box",
+              "left": 424,
+              "top": 424
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "4acb81c7-5f06-4784-8a22-63a8b7800162",
+              "width": 107,
+              "height": 105,
+              "geometry": "box",
+              "left": 425,
+              "top": 422
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "24962795-80a8-469b-a758-3351e5ac9a87",
+              "width": 107,
+              "height": 105,
+              "geometry": "box",
+              "left": 424,
+              "top": 424
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "622c4b74-eb64-4109-8608-600b1bc079b7",
+              "width": 107,
+              "height": 105,
+              "geometry": "box",
+              "left": 424,
+              "top": 423
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "1a52f86f-3ff9-4ec4-9bad-912837747794",
+              "width": 10,
+              "height": 23,
+              "geometry": "box",
+              "left": 823,
+              "top": 667
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "f1a5fef3-30ac-4bdb-9c65-c1b227cbc5fd",
+              "width": 9,
+              "height": 19,
+              "geometry": "box",
+              "left": 873,
+              "top": 692
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "b664abcd-7b14-42c6-836c-d14d246a1664",
+              "width": 7,
+              "height": 16,
+              "geometry": "box",
+              "left": 866,
+              "top": 695
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "18194f0d-3dcc-4bf5-b47f-bf684f7d7a6f",
+              "width": 7,
+              "height": 16,
+              "geometry": "box",
+              "left": 848,
+              "top": 687
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "b485ba3f-e652-4b23-8449-b69cef698113",
+              "width": 7,
+              "height": 16,
+              "geometry": "box",
+              "left": 666,
+              "top": 667
+            }
+          ],
+          "is_customer_fix": false
+        },
+        "customer_reviewed_by": "fieldengineering+observesign@scale.com",
+        "customer_audit_time_secs": 120.134,
+        "customer_audited_at": "2020-11-20T14:35:53.935Z",
+        "audits": [
+          {
+            "audited_by": "fieldengineering+observesign@scale.com",
+            "audited_at": "2020-11-20T14:35:53.935Z",
+            "audit_time_secs": 120.134,
+            "audit_result": "rejected",
+            "audit_source": "customer"
+          },
+          {
+            "audited_by": "fieldengineering+observesign@scale.com",
+            "audited_at": "2020-11-18T06:12:23.389Z",
+            "audit_time_secs": 35.185,
+            "audit_result": "accepted",
+            "audit_source": "customer"
+          }
+        ],
+        "updated_at": "2021-01-03T00:19:01.337Z",
+        "work_started": true
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f127f643a6b1000172320a5",
+        "task_id": "5f127f643a6b1000172320a5",
+        "created_at": "2020-07-18T04:49:40.294Z",
+        "completed_at": "2020-07-18T05:50:10.213Z",
+        "callback_url": "https://example.com/callback",
+        "type": "annotation",
+        "status": "completed",
+        "instruction": "Draw a tight box around each object.",
+        "params": {
+          "attachment": "https://observesign.s3-us-west-2.amazonaws.com/traffic_sign_5.jpg",
+          "attachment_type": "image",
+          "objects_to_annotate": [
+            "traffic_control_sign",
+            "construction_sign",
+            "information_sign",
+            "policy_sign",
+            "non_visible_face"
+          ],
+          "with_labels": true,
+          "min_width": 0,
+          "min_height": 0,
+          "examples": [],
+          "annotation_attributes": {
+            "occlusion": {
+              "description": "What percent of the object is occluded?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "truncation": {
+              "description": "What percent of the object is truncated?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "background_color": {
+              "description": "What color is the background of the sign?",
+              "choices": [
+                "white",
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "blue",
+                "other",
+                "not_applicable"
+              ]
+            }
+          }
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "callback_succeeded": false,
+        "processed_attachments": [],
+        "project": "Traffic Sign Detection",
+        "customer_review_status": "rejected",
+        "customer_review_comments": [
+          "\"Over 3 tons\" sign is missing from labeling. \"Except one block for deliveries\" should also be labeled, separately! "
+        ],
+        "prior_responses": [],
+        "response": {
+          "annotations": [
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "1aba6212-74e1-44e9-b725-5e1d93e8d5b8",
+              "width": 20,
+              "height": 28,
+              "geometry": "box",
+              "left": 1335,
+              "top": 270
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "6fc799c0-6bc3-45c2-a15a-10a6d0fd4d08",
+              "width": 5,
+              "height": 7,
+              "geometry": "box",
+              "left": 1132,
+              "top": 280
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "90e2c226-64ca-4568-b3a4-f59daf5b6583",
+              "width": 9,
+              "height": 14,
+              "geometry": "box",
+              "left": 982,
+              "top": 258
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "2d088486-a3eb-42f9-a199-a3cee042bee7",
+              "width": 7,
+              "height": 9,
+              "geometry": "box",
+              "left": 914,
+              "top": 295
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "90eddddc-8c3a-47e1-adbb-8029a16d59b5",
+              "width": 7,
+              "height": 9,
+              "geometry": "box",
+              "left": 914,
+              "top": 304
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "b9ce0b31-a7ff-48a6-86b5-3930e3d65179",
+              "width": 11,
+              "height": 13,
+              "geometry": "box",
+              "left": 833,
+              "top": 306
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "97702974-1d67-40cb-bd5a-08e3efc7f753",
+              "width": 11,
+              "height": 13,
+              "geometry": "box",
+              "left": 833,
+              "top": 320
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "1838e58b-45c6-471f-adf2-c6e75c15b08c",
+              "width": 17,
+              "height": 6,
+              "geometry": "box",
+              "left": 813,
+              "top": 307
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "07947742-86ba-4632-ac29-2f8f5b9c8fb0",
+              "width": 5,
+              "height": 11,
+              "geometry": "box",
+              "left": 965,
+              "top": 280
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "25%",
+                "background_color": "white"
+              },
+              "uuid": "699704b6-3e81-42b1-8131-b1686157ca26",
+              "width": 67,
+              "height": 56,
+              "geometry": "box",
+              "left": 1812,
+              "top": 0
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "ab04c398-fb74-4dcd-86fc-f33c9dff3b08",
+              "width": 9,
+              "height": 32,
+              "geometry": "box",
+              "left": 530,
+              "top": 261
+            }
+          ],
+          "is_customer_fix": false
+        },
+        "customer_reviewed_by": "fieldengineering+observesign@scale.com",
+        "customer_audit_time_secs": 67.604,
+        "customer_audited_at": "2020-11-18T06:15:45.524Z",
+        "audits": [
+          {
+            "audited_by": "fieldengineering+observesign@scale.com",
+            "audited_at": "2020-11-18T06:15:45.524Z",
+            "audit_time_secs": 67.604,
+            "audit_result": "rejected",
+            "audit_source": "customer"
+          }
+        ],
+        "updated_at": "2021-01-02T03:04:09.519Z",
+        "work_started": true
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f127f5f3a6b100017232099",
+        "task_id": "5f127f5f3a6b100017232099",
+        "created_at": "2020-07-18T04:49:35.591Z",
+        "completed_at": "2020-07-18T06:01:57.351Z",
+        "callback_url": "https://example.com/callback",
+        "type": "annotation",
+        "status": "completed",
+        "instruction": "Draw a tight box around each object.",
+        "params": {
+          "attachment": "https://observesign.s3-us-west-2.amazonaws.com/traffic_sign_6.png",
+          "attachment_type": "image",
+          "objects_to_annotate": [
+            "traffic_control_sign",
+            "construction_sign",
+            "information_sign",
+            "policy_sign",
+            "non_visible_face"
+          ],
+          "with_labels": true,
+          "min_width": 0,
+          "min_height": 0,
+          "examples": [],
+          "annotation_attributes": {
+            "occlusion": {
+              "description": "What percent of the object is occluded?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "truncation": {
+              "description": "What percent of the object is truncated?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "background_color": {
+              "description": "What color is the background of the sign?",
+              "choices": [
+                "white",
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "blue",
+                "other",
+                "not_applicable"
+              ]
+            }
+          }
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "callback_succeeded": false,
+        "processed_attachments": [],
+        "project": "Traffic Sign Detection",
+        "customer_review_status": "rejected",
+        "customer_review_comments": [
+          "Large area is annotated that does not contain traffic signals"
+        ],
+        "prior_responses": [],
+        "response": {
+          "annotations": [
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "green"
+              },
+              "uuid": "9a3eac82-aeca-48df-a58f-76179d26e8ac",
+              "width": 146,
+              "height": 109,
+              "geometry": "box",
+              "left": 1106,
+              "top": 0
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "green"
+              },
+              "uuid": "1e6d591d-0ae5-4710-99da-8f0baf03d63a",
+              "width": 20,
+              "height": 44,
+              "geometry": "box",
+              "left": 998,
+              "top": 20
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "75%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "27f4e6b1-188f-4e92-8a3e-cd9dcee139c2",
+              "width": 38,
+              "height": 19,
+              "geometry": "box",
+              "left": 1010,
+              "top": 0
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "a40ed445-e508-4e8f-ab3a-d91b6f2ae1b3",
+              "width": 69,
+              "height": 76,
+              "geometry": "box",
+              "left": 914,
+              "top": 38
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "cdbdb50c-f40e-463e-b2ee-c4f50ef9aa90",
+              "width": 38,
+              "height": 76,
+              "geometry": "box",
+              "left": 914,
+              "top": 160
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "50%",
+                "background_color": "other"
+              },
+              "uuid": "1f4105b0-8651-4fdf-b673-b74136f56ad6",
+              "width": 41,
+              "height": 52,
+              "geometry": "box",
+              "left": 835,
+              "top": 0
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "9da76450-bf48-4809-8ded-2fb78f79d77a",
+              "width": 31,
+              "height": 85,
+              "geometry": "box",
+              "left": 841,
+              "top": 85
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "50%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "08333b85-b375-447f-a66f-99f1b053fe9c",
+              "width": 88,
+              "height": 86,
+              "geometry": "box",
+              "left": 812,
+              "top": 85
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "1331c684-b2b8-4f25-8c78-ab304f5fb7c4",
+              "width": 66,
+              "height": 66,
+              "geometry": "box",
+              "left": 824,
+              "top": 187
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "50%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "ae0b82b0-76bf-4c14-9dce-7766da968ad3",
+              "width": 46,
+              "height": 47,
+              "geometry": "box",
+              "left": 880,
+              "top": 206
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "84bc700a-b94c-4760-9222-89af07d1d533",
+              "width": 71,
+              "height": 15,
+              "geometry": "box",
+              "left": 754,
+              "top": 250
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "bb95de70-d32f-4a3e-9a25-28300e6f6dc6",
+              "width": 32,
+              "height": 28,
+              "geometry": "box",
+              "left": 761,
+              "top": 276
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "5ee54a43-fdce-4bb5-b5e7-0f162cccceba",
+              "width": 28,
+              "height": 73,
+              "geometry": "box",
+              "left": 744,
+              "top": 166
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "022865ce-4287-4876-86bf-3246ae1dad9f",
+              "width": 51,
+              "height": 47,
+              "geometry": "box",
+              "left": 531,
+              "top": 26
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "02d02470-3a8e-4889-861e-c7b9b40e60ec",
+              "width": 37,
+              "height": 18,
+              "geometry": "box",
+              "left": 538,
+              "top": 75
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "50%",
+                "truncation": "0%",
+                "background_color": "green"
+              },
+              "uuid": "3523b86f-1429-4300-a225-a4b13612ad31",
+              "width": 32,
+              "height": 9,
+              "geometry": "box",
+              "left": 481,
+              "top": 125
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "3a855e84-a5c0-4e6c-acd7-a721b5023bc5",
+              "width": 15,
+              "height": 14,
+              "geometry": "box",
+              "left": 467,
+              "top": 109
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "50%",
+                "background_color": "other"
+              },
+              "uuid": "04e71569-03c4-48d6-b566-982df88560ff",
+              "width": 41,
+              "height": 52,
+              "geometry": "box",
+              "left": 414,
+              "top": 1
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "7160965f-5d27-4291-b3f5-f677a8205c77",
+              "width": 10,
+              "height": 24,
+              "geometry": "box",
+              "left": 455,
+              "top": 107
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "053c011a-9fe1-4ff1-8140-9d7c2310b7b2",
+              "width": 12,
+              "height": 27,
+              "geometry": "box",
+              "left": 325,
+              "top": 82
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "86f7d374-8574-42be-ab2d-3f2945992f31",
+              "width": 42,
+              "height": 8,
+              "geometry": "box",
+              "left": 267,
+              "top": 102
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "d2adfa57-88fc-4361-b450-5d13e0040f62",
+              "width": 8,
+              "height": 20,
+              "geometry": "box",
+              "left": 228,
+              "top": 169
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "50%",
+                "truncation": "0%",
+                "background_color": "green"
+              },
+              "uuid": "daeedc6f-3c26-4eed-9adb-c4454b7b0695",
+              "width": 20,
+              "height": 6,
+              "geometry": "box",
+              "left": 496,
+              "top": 212
+            },
+            {
+              "label": "construction_sign",
+              "attributes": {
+                "occlusion": "50%",
+                "truncation": "0%",
+                "background_color": "orange"
+              },
+              "uuid": "478496a5-1d09-4d53-889a-ef56a561b54b",
+              "width": 32,
+              "height": 31,
+              "geometry": "box",
+              "left": 559,
+              "top": 191
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "45ba8760-8e8b-442b-8a24-5be005d47bb4",
+              "width": 24,
+              "height": 5,
+              "geometry": "box",
+              "left": 121,
+              "top": 186
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "915c0153-23d2-47aa-938d-97d352838105",
+              "width": 20,
+              "height": 20,
+              "geometry": "box",
+              "left": 136,
+              "top": 174
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "c4aeb4bc-455e-45f0-a10d-0529386d9952",
+              "width": 11,
+              "height": 13,
+              "geometry": "box",
+              "left": 182,
+              "top": 183
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "50%",
+                "background_color": "other"
+              },
+              "uuid": "860bbaaf-b080-46e6-b8a4-80a0ca38b946",
+              "width": 39,
+              "height": 31,
+              "geometry": "box",
+              "left": 203,
+              "top": 0
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "25%",
+                "background_color": "white"
+              },
+              "uuid": "0ac0c72e-d384-4039-80bb-7ac9d71a4d87",
+              "width": 129,
+              "height": 29,
+              "geometry": "box",
+              "left": 274,
+              "top": 1
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "25e6e90c-7acb-4786-a0fb-ca7b10fc3687",
+              "width": 518,
+              "height": 654,
+              "geometry": "box",
+              "left": 2,
+              "top": 196
+            }
+          ],
+          "is_customer_fix": false
+        },
+        "customer_reviewed_by": "fieldengineering+observesign@scale.com",
+        "customer_audit_time_secs": 216.509,
+        "customer_audited_at": "2020-11-18T06:07:27.164Z",
+        "audits": [
+          {
+            "audited_by": "fieldengineering+observesign@scale.com",
+            "audited_at": "2020-11-18T06:07:27.164Z",
+            "audit_time_secs": 216.509,
+            "audit_result": "rejected",
+            "audit_source": "customer"
+          }
+        ],
+        "updated_at": "2021-01-02T03:12:50.900Z",
+        "work_started": true
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f127f5ab1cb1300109e4ffc",
+        "task_id": "5f127f5ab1cb1300109e4ffc",
+        "created_at": "2020-07-18T04:49:30.421Z",
+        "completed_at": "2020-07-18T06:12:06.802Z",
+        "callback_url": "https://example.com/callback",
+        "type": "annotation",
+        "status": "completed",
+        "instruction": "Draw a tight box around each object.",
+        "params": {
+          "attachment": "https://observesign.s3-us-west-2.amazonaws.com/traffic_sign_7.jpg",
+          "attachment_type": "image",
+          "objects_to_annotate": [
+            "traffic_control_sign",
+            "construction_sign",
+            "information_sign",
+            "policy_sign",
+            "non_visible_face"
+          ],
+          "with_labels": true,
+          "min_width": 0,
+          "min_height": 0,
+          "examples": [],
+          "annotation_attributes": {
+            "occlusion": {
+              "description": "What percent of the object is occluded?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "truncation": {
+              "description": "What percent of the object is truncated?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "background_color": {
+              "description": "What color is the background of the sign?",
+              "choices": [
+                "white",
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "blue",
+                "other",
+                "not_applicable"
+              ]
+            }
+          }
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "callback_succeeded": false,
+        "processed_attachments": [],
+        "project": "Traffic Sign Detection",
+        "customer_review_status": "rejected",
+        "customer_review_comments": [
+          "road closed/pedestrian sign",
+          "Possibly missed a label with non visible face. It's hard to say, but better to flag and be sure",
+          "Possibly missed a label with non visible face (in front of cone). It's hard to say, but better to flag and be sure"
+        ],
+        "prior_responses": [],
+        "response": {
+          "annotations": [
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "cfe6cdc9-1d7f-44f8-93a5-0dfa3d4bcd95",
+              "width": 23,
+              "height": 71,
+              "geometry": "box",
+              "left": 2182,
+              "top": 226
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "blue"
+              },
+              "uuid": "80d5d8f9-82f5-4369-87cf-78f0fd846e21",
+              "width": 137,
+              "height": 123,
+              "geometry": "box",
+              "left": 2305,
+              "top": 27
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "yellow"
+              },
+              "uuid": "879a6a14-a842-4d4d-b8a0-69e29720ec46",
+              "width": 79,
+              "height": 117,
+              "geometry": "box",
+              "left": 1280,
+              "top": 341
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "50%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "c4e5748f-0886-40a6-b819-ab4ce1ea81f8",
+              "width": 177,
+              "height": 144,
+              "geometry": "box",
+              "left": 702,
+              "top": 442
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "e78b5101-4ec2-420a-a727-8ecbebb26a16",
+              "width": 140,
+              "height": 131,
+              "geometry": "box",
+              "left": 715,
+              "top": 316
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "fcc605e8-7f32-419d-a0e4-835304d6b200",
+              "width": 11,
+              "height": 22,
+              "geometry": "box",
+              "left": 1329,
+              "top": 330
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "95177d50-489e-4322-9d2e-15e288a187d6",
+              "width": 20,
+              "height": 18,
+              "geometry": "box",
+              "left": 1154,
+              "top": 302
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "258b3310-d438-4dc0-a0fc-6978679d6232",
+              "width": 9,
+              "height": 10,
+              "geometry": "box",
+              "left": 1160,
+              "top": 322
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "0030ab4f-8b05-4ea0-b1d9-204a379d3409",
+              "width": 6,
+              "height": 14,
+              "geometry": "box",
+              "left": 1239,
+              "top": 319
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "68db80c5-a557-4ff1-a8ca-8f38deb29a94",
+              "width": 19,
+              "height": 24,
+              "geometry": "box",
+              "left": 1672,
+              "top": 315
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "63c2ba36-e218-4874-bb29-ba1e1cf11b42",
+              "width": 20,
+              "height": 18,
+              "geometry": "box",
+              "left": 1671,
+              "top": 295
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "b124ea9b-898f-4370-9e2d-a3044b54e8e0",
+              "width": 14,
+              "height": 12,
+              "geometry": "box",
+              "left": 1557,
+              "top": 299
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "50%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "3fb2176f-3801-408e-aa22-76519f8dcb91",
+              "width": 13,
+              "height": 15,
+              "geometry": "box",
+              "left": 1558,
+              "top": 312
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "red"
+              },
+              "uuid": "c46a8006-591d-483d-a375-983b02b158a9",
+              "width": 12,
+              "height": 13,
+              "geometry": "box",
+              "left": 1456,
+              "top": 315
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "be566b34-b162-405c-b486-7ed2b038a041",
+              "width": 53,
+              "height": 63,
+              "geometry": "box",
+              "left": 592,
+              "top": 295
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "yellow"
+              },
+              "uuid": "f631300f-5a36-4e2a-a093-eb3f4d911577",
+              "width": 26,
+              "height": 56,
+              "geometry": "box",
+              "left": 213,
+              "top": 296
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "yellow"
+              },
+              "uuid": "39d634f5-df0e-4ef6-b327-06d467d68e64",
+              "width": 23,
+              "height": 61,
+              "geometry": "box",
+              "left": 223,
+              "top": 233
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "red"
+              },
+              "uuid": "02d596ed-dfc2-4b3c-aafd-9f309c7ef248",
+              "width": 82,
+              "height": 29,
+              "geometry": "box",
+              "left": 2340,
+              "top": 159
+            }
+          ],
+          "is_customer_fix": false
+        },
+        "customer_reviewed_by": "fieldengineering+observesign@scale.com",
+        "customer_audit_time_secs": 45.721,
+        "customer_audited_at": "2020-11-20T01:01:36.147Z",
+        "audits": [
+          {
+            "audited_by": "fieldengineering+observesign@scale.com",
+            "audited_at": "2020-11-20T01:01:36.147Z",
+            "audit_time_secs": 45.721,
+            "audit_result": "rejected",
+            "audit_source": "customer"
+          },
+          {
+            "audited_by": "fieldengineering+observesign@scale.com",
+            "audited_at": "2020-11-20T01:00:50.096Z",
+            "audit_time_secs": 97.394,
+            "audit_result": "rejected",
+            "audit_source": "customer"
+          },
+          {
+            "audited_by": "fieldengineering+observesign@scale.com",
+            "audited_at": "2020-11-19T04:20:33.157Z",
+            "audit_time_secs": 58.76,
+            "audit_result": "rejected",
+            "audit_source": "customer"
+          }
+        ],
+        "updated_at": "2021-01-02T05:51:33.508Z",
+        "work_started": true
+      },
+      {
+        "client": {
+          "apiKey": "live_74275b9b2b8b44d8ad156db03d2008ed"
+        },
+        "id": "5f127f55fdc4150010e37244",
+        "task_id": "5f127f55fdc4150010e37244",
+        "created_at": "2020-07-18T04:49:25.844Z",
+        "completed_at": "2020-07-18T06:21:54.784Z",
+        "callback_url": "https://example.com/callback",
+        "type": "annotation",
+        "status": "completed",
+        "instruction": "Draw a tight box around each object.",
+        "params": {
+          "attachment": "https://observesign.s3-us-west-2.amazonaws.com/traffic_sign_8.jpg",
+          "attachment_type": "image",
+          "objects_to_annotate": [
+            "traffic_control_sign",
+            "construction_sign",
+            "information_sign",
+            "policy_sign",
+            "non_visible_face"
+          ],
+          "with_labels": true,
+          "min_width": 0,
+          "min_height": 0,
+          "examples": [],
+          "annotation_attributes": {
+            "occlusion": {
+              "description": "What percent of the object is occluded?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "truncation": {
+              "description": "What percent of the object is truncated?",
+              "choices": [
+                "0%",
+                "25%",
+                "50%",
+                "75%",
+                "100%"
+              ]
+            },
+            "background_color": {
+              "description": "What color is the background of the sign?",
+              "choices": [
+                "white",
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "blue",
+                "other",
+                "not_applicable"
+              ]
+            }
+          }
+        },
+        "is_test": false,
+        "urgency": "standard",
+        "metadata": {},
+        "callback_succeeded": false,
+        "processed_attachments": [],
+        "project": "Traffic Sign Detection",
+        "customer_review_status": "rejected",
+        "customer_review_comments": [
+          "Multiple small signs, stacked on top of each other???"
+        ],
+        "prior_responses": [],
+        "response": {
+          "annotations": [
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "535a6147-cdc3-49f4-9a97-002a7e3195ba",
+              "width": 53,
+              "height": 67,
+              "geometry": "box",
+              "left": 314,
+              "top": 622
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "e2284849-dfbf-44cc-98f1-fc09420102c0",
+              "width": 80,
+              "height": 73,
+              "geometry": "box",
+              "left": 419,
+              "top": 612
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "ba0d00b6-cd39-42bd-b977-a8a15cc474de",
+              "width": 205,
+              "height": 44,
+              "geometry": "box",
+              "left": 373,
+              "top": 559
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "cccda4ab-2cf6-43c6-97d3-5616152ed974",
+              "width": 42,
+              "height": 20,
+              "geometry": "box",
+              "left": 417,
+              "top": 540
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "972ac409-a86e-41eb-b0e2-f667c065dd5a",
+              "width": 55,
+              "height": 130,
+              "geometry": "box",
+              "left": 395,
+              "top": 441
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "f4501d53-1ff5-474c-81a2-fc0412d028fa",
+              "width": 75,
+              "height": 173,
+              "geometry": "box",
+              "left": 461,
+              "top": 353
+            },
+            {
+              "label": "policy_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "b946a4bc-4d48-4301-8ac1-24a93d379696",
+              "width": 16,
+              "height": 33,
+              "geometry": "box",
+              "left": 696,
+              "top": 625
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "4240108c-1969-415a-ad1e-2c5a07217167",
+              "width": 23,
+              "height": 35,
+              "geometry": "box",
+              "left": 1025,
+              "top": 667
+            },
+            {
+              "label": "information_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "white"
+              },
+              "uuid": "ec8b8899-5d60-44c1-9919-fae2902d2705",
+              "width": 24,
+              "height": 12,
+              "geometry": "box",
+              "left": 1025,
+              "top": 646
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "804358f6-1bfd-4903-9edc-9de27c5fe27b",
+              "width": 34,
+              "height": 73,
+              "geometry": "box",
+              "left": 1044,
+              "top": 554
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "725f1bb1-431c-4f3c-9602-be79c555547b",
+              "width": 33,
+              "height": 32,
+              "geometry": "box",
+              "left": 1325,
+              "top": 679
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "8e1a898d-7ed1-4abc-8ef1-4a2a47eb5cad",
+              "width": 30,
+              "height": 75,
+              "geometry": "box",
+              "left": 1332,
+              "top": 565
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "941944be-8add-4b0d-b604-32683cb47cef",
+              "width": 21,
+              "height": 72,
+              "geometry": "box",
+              "left": 1369,
+              "top": 569
+            },
+            {
+              "label": "non_visible_face",
+              "attributes": {
+                "occlusion": "25%",
+                "truncation": "0%",
+                "background_color": "not_applicable"
+              },
+              "uuid": "73bb5a1f-39d6-494d-8ce0-7835a3a9dce4",
+              "width": 66,
+              "height": 62,
+              "geometry": "box",
+              "left": 1346,
+              "top": 501
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "97319a82-2635-4785-9589-ff7e0b67bf81",
+              "width": 2,
+              "height": 2,
+              "geometry": "box",
+              "left": 1350,
+              "top": 738
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "31b6471b-0af3-4eb0-9923-57ca32972fde",
+              "width": 2,
+              "height": 2,
+              "geometry": "box",
+              "left": 1350.701904296875,
+              "top": 742.207763671875
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "b43ba10e-0507-4eaf-ba67-c6fb49d6beca",
+              "width": 2,
+              "height": 2,
+              "geometry": "box",
+              "left": 1350.352783203125,
+              "top": 746.7462158203125
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "3d2d21c8-7c44-4c04-911b-168c22db6b48",
+              "width": 2,
+              "height": 2,
+              "geometry": "box",
+              "left": 1349.654541015625,
+              "top": 743.6041870117188
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "61f914e3-5699-4e7c-b3be-c9722b43c229",
+              "width": 2,
+              "height": 2,
+              "geometry": "box",
+              "left": 1352.0982666015625,
+              "top": 740.8113403320312
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "17b437ad-168b-47c6-92de-3b308157ce0b",
+              "width": 2,
+              "height": 2,
+              "geometry": "box",
+              "left": 1348.607177734375,
+              "top": 740.8113403320312
+            },
+            {
+              "label": "traffic_control_sign",
+              "attributes": {
+                "occlusion": "0%",
+                "truncation": "0%",
+                "background_color": "other"
+              },
+              "uuid": "5111c4d1-5f26-4860-a834-b3890ae5d362",
+              "width": 2,
+              "height": 2,
+              "geometry": "box",
+              "left": 1351.7491455078125,
+              "top": 744.6515502929688
+            }
+          ],
+          "is_customer_fix": false
+        },
+        "customer_reviewed_by": "fieldengineering+observesign@scale.com",
+        "customer_audit_time_secs": 403.397,
+        "customer_audited_at": "2020-11-20T02:17:42.394Z",
+        "audits": [
+          {
+            "audited_by": "fieldengineering+observesign@scale.com",
+            "audited_at": "2020-11-20T02:17:42.394Z",
+            "audit_time_secs": 403.397,
+            "audit_result": "rejected",
+            "audit_source": "customer"
+          }
+        ],
+        "updated_at": "2021-01-01T04:07:27.983Z",
+        "work_started": true
+      }
+    ],
+    "total": 21,
+    "offset": 0,
+    "limit": 100,
+    "has_more": false
+  }
