@@ -1,8 +1,6 @@
 const scaleapi = require('scaleapi');
 const client = scaleapi.ScaleClient(process.env['SCALE_API_KEY']);
-const CompletedQualityReportItem = require('./classes/CompletedQualityReportItem');
-const QualityReportBody = require('./classes/QualityReportBody');
-const ImageViolation = require('./classes/ImageViolation');
+const QualityReportTaskItem = require('./QualityReportTaskItem');
 
 getCompletedTasksFromScale = async (nextToken) => {
     let completedTaskResponses = [];
@@ -26,38 +24,40 @@ getTaskResponsesFromScale = async () => {
     let qualityReportBody = [];
     completedTasks.forEach(task=>{
         let taskAnnotations = task.response.annotations;
-        let qualityReportItem = {
-            "task": task.id,
-            "warnings": {
-                "sameSizeBoxes": [],
-                "imageConstraintsExceeded": [],
-                "trafficControlColor": []
-            },
-            "errors": {
-                "imageConstraintsExceeded": []
-            }
-        }
+        let qualityReportItem;
         let annotationsWarningsWithMatchingSize = [];
         let annotationErrorsThatExceedMaxAndMinSize = [];
         let annotationWarningsThatExceedMaxAndMinSize = [];
         let annotationWarningsTrafficControlColor = [];
 
         for (let i = 0; i <= taskAnnotations.length - 1; i++) {
-            //validate the task annotations
             const staticAnnotation = taskAnnotations[i]
-            findMinAndMaxBoxSizeAnnotations(staticAnnotation, annotationErrorsThatExceedMaxAndMinSize, annotationWarningsThatExceedMaxAndMinSize); //handles both max 1) and min 2) // These should be errors
-            qualityReportItem.warnings.imageConstraintsExceeded = annotationWarningsThatExceedMaxAndMinSize;
-            qualityReportItem.errors.imageConstraintsExceeded = annotationErrorsThatExceedMaxAndMinSize;
 
-            validateTrafficControlColor(staticAnnotation, annotationWarningsTrafficControlColor); //handles 3) // These should be warnings
-            qualityReportItem.warnings.trafficControlColor = annotationWarningsTrafficControlColor;
-            // validateTruncation(); //handles 4) Nice to have but can't do with given time
-            findSameSizeAnnotations(staticAnnotation, taskAnnotations, i, annotationsWarningsWithMatchingSize); //handles 5)
-            qualityReportItem.warnings.sameSizeBoxes = annotationsWarningsWithMatchingSize;
-            // console.log("qualityReportItem.warnings.sameSizeImages", qualityReportItem.warnings.sameSizeImages)
-            console.log("qualityReportItem", qualityReportItem.errors.imageConstraintsExceeded)
+            // Search for annotations that are the same size and create warnings.
+            findSameSizeAnnotations(staticAnnotation, taskAnnotations, i, annotationsWarningsWithMatchingSize);
+            // qualityReportItem.warnings.sameSizeBoxes = annotationsWarningsWithMatchingSize;
+
+            // Search for Traffic Control Sign annotations that have a color that is not "other" or "not_applicable"
+            validateTrafficControlColor(staticAnnotation, annotationWarningsTrafficControlColor);
+            // qualityReportItem.warnings.trafficControlColor = annotationWarningsTrafficControlColor;
+
+            // Search for the annotations that exceed minimum and max values and create either errors or warnings.
+            findMinAndMaxBoxSizeAnnotations(staticAnnotation, annotationErrorsThatExceedMaxAndMinSize, annotationWarningsThatExceedMaxAndMinSize); 
+            // qualityReportItem.warnings.imageConstraintsExceeded = annotationWarningsThatExceedMaxAndMinSize;
+            // qualityReportItem.errors.imageConstraintsExceeded = annotationErrorsThatExceedMaxAndMinSize;
+
+            // Search for annotations that have truncation values that are not compatible with image size, x/y values, and width/height values.
+            // validateTruncation(); // Would impliment this with more time
+
+            qualityReportItem = new QualityReportTaskItem(task.id, annotationsWarningsWithMatchingSize, annotationWarningsTrafficControlColor, 
+                annotationWarningsThatExceedMaxAndMinSize, annotationErrorsThatExceedMaxAndMinSize);
+
+
         }
-        qualityReportBody.push(qualityReportItem);
+        if(qualityReportItem){
+            qualityReportBody.push(qualityReportItem);
+        }
+        
         // completedTaskQualityReport.push(new CompletedQualityReportItem(task.id, "warning", "sample message"))
     })
     console.log("completedTaskQualityReport", JSON.stringify(qualityReportBody));
