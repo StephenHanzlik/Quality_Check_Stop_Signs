@@ -6,7 +6,11 @@ const QualityReportTaskItem = require('./QualityReportTaskItem');
 getTasksFromScale = async (nextToken) => {
     let completedTaskResponses = [];
     const params = {"status": "completed"};
-    if(nextToken) params["next_token"] = nextToken;
+
+    if(nextToken) {
+        params["next_token"] = nextToken;
+        await pause(5000);
+    }
 
     const completedTasks = await new Promise(resolve => {
         console.log("Retrieving completed tasks from Scale...")
@@ -18,6 +22,14 @@ getTasksFromScale = async (nextToken) => {
     completedTasks.forEach(task => completedTaskResponses.push(task));
     return (nextToken ? await getTasksFromScale(nextToken) : completedTaskResponses);
 }
+
+pause = (milliseconds) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(milliseconds)
+      }, milliseconds )
+    })
+} 
 
 qualityCheck = async () => {
     // Get all the tasks that have been completed
@@ -72,10 +84,6 @@ isBoxSameSize = (itterableAnnotation, staticAnnotation) => {
     return itterableAnnotation.width === staticAnnotation.width && itterableAnnotation.height == staticAnnotation.height;
 }
 
-// hasEitherBoxesAlreadyBeenFound = (itterableAnnotation, staticAnnotation, annotationsWarningsWithMatchingSize) => {
-//     return annotationsWarningsWithMatchingSize.indexOf(itterableAnnotation) > -1 || annotationsWarningsWithMatchingSize.indexOf(staticAnnotation) > -1
-// }
-
 boxHasAlreadyBeenFound = (annotation, annotationsWarningsWithMatchingSize) => {
     return annotationsWarningsWithMatchingSize.indexOf(annotation) > -1
 }
@@ -127,6 +135,8 @@ writeToLocalJsonFile = (json) => {
 
 qualityCheck();//This invocation runs the whole script.
 //TODO: inputs should allow for queries of api by date
+    // sample values "created_at": "2016-06-23T08:51:13.903Z" / "completed_at": "2016-06-23T09:09:10.108Z"
 //TODO: impliment rate limiting so we don't overload the api
+    // use 
 //TODO: add checking for truncation values
 //TODO: add checking for occlusion values
