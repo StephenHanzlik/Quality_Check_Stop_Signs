@@ -9,7 +9,7 @@ getTasksFromScale = async (nextToken) => {
     if(nextToken) params["next_token"] = nextToken;
 
     const completedTasks = await new Promise(resolve => {
-        console.log("Retrieving completed tasks for Scale...")
+        console.log("Retrieving completed tasks from Scale...")
         client.tasks(params, (err, taskList) => {
             nextToken = taskList['next_token'];
             resolve(taskList.docs);
