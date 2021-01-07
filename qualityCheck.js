@@ -1,8 +1,9 @@
 const scaleapi = require('scaleapi');
+const fs = require("fs");
 const client = scaleapi.ScaleClient(process.env['SCALE_API_KEY']);
 const QualityReportTaskItem = require('./QualityReportTaskItem');
 
-getCompletedTasksFromScale = async (nextToken) => {
+getTasksFromScale = async (nextToken) => {
     let completedTaskResponses = [];
     const params = {"status": "completed"};
     if(nextToken) params["next_token"] = nextToken;
@@ -15,14 +16,14 @@ getCompletedTasksFromScale = async (nextToken) => {
         });
     });
     completedTasks.forEach(task => completedTaskResponses.push(task));
-    return (nextToken ? await getCompletedTasksFromScale(nextToken) : completedTaskResponses);
+    return (nextToken ? await getTasksFromScale(nextToken) : completedTaskResponses);
 }
 
-getTaskResponsesFromScale = async () => {
+qualityCheck = async () => {
     // Get all the tasks that have been completed
-    let completedTasks = await getCompletedTasksFromScale();
+    let completedTasks = await getTasksFromScale();
     let qualityReportBody = [];
-    completedTasks.forEach(task=>{
+    await completedTasks.forEach(task=>{
         let taskAnnotations = task.response.annotations;
         let qualityReportItem;
         let annotationsWarningsWithMatchingSize = [];
@@ -32,36 +33,22 @@ getTaskResponsesFromScale = async () => {
 
         for (let i = 0; i <= taskAnnotations.length - 1; i++) {
             const staticAnnotation = taskAnnotations[i]
-
             // Search for annotations that are the same size and create warnings.
             findSameSizeAnnotations(staticAnnotation, taskAnnotations, i, annotationsWarningsWithMatchingSize);
-            // qualityReportItem.warnings.sameSizeBoxes = annotationsWarningsWithMatchingSize;
-
             // Search for Traffic Control Sign annotations that have a color that is not "other" or "not_applicable"
             validateTrafficControlColor(staticAnnotation, annotationWarningsTrafficControlColor);
-            // qualityReportItem.warnings.trafficControlColor = annotationWarningsTrafficControlColor;
-
             // Search for the annotations that exceed minimum and max values and create either errors or warnings.
             findMinAndMaxBoxSizeAnnotations(staticAnnotation, annotationErrorsThatExceedMaxAndMinSize, annotationWarningsThatExceedMaxAndMinSize); 
-            // qualityReportItem.warnings.imageConstraintsExceeded = annotationWarningsThatExceedMaxAndMinSize;
-            // qualityReportItem.errors.imageConstraintsExceeded = annotationErrorsThatExceedMaxAndMinSize;
-
             // Search for annotations that have truncation values that are not compatible with image size, x/y values, and width/height values.
             // validateTruncation(); // Would impliment this with more time
-
             qualityReportItem = new QualityReportTaskItem(task.id, annotationsWarningsWithMatchingSize, annotationWarningsTrafficControlColor, 
                 annotationWarningsThatExceedMaxAndMinSize, annotationErrorsThatExceedMaxAndMinSize);
-
-
         }
         if(qualityReportItem){
             qualityReportBody.push(qualityReportItem);
         }
-        
-        // completedTaskQualityReport.push(new CompletedQualityReportItem(task.id, "warning", "sample message"))
     })
-    console.log("completedTaskQualityReport", JSON.stringify(qualityReportBody));
-    // const qualityReportBody = new QualityReportBody(completedTaskQualityReport)
+    writeToLocalJsonFile(qualityReportBody);
 }
 
 findSameSizeAnnotations = (staticAnnotation, taskAnnotations, i, annotationsWarningsWithMatchingSize) => {
@@ -117,49 +104,26 @@ validateTrafficControlColor = (annotation, annotationWarningsTrafficControlColor
 }
 
 validateTruncation = () => {
-
+    //TODO: validate that truncation values are practical given image size, x/y, and width/height values
 }
 
-// validateAnnotations = (annotations, taskId) => {
-//     annotations.forEach(annotation=>{
-//         // validateBoxSize(annotation); //handles both max 1) and min 2)
-//         // validateTrafficControlColor(annotation); //handles 3)
+writeToLocalJsonFile = (json) => {
+    const fileName = "./qualityReport.json";
+    fs.writeFile(fileName, JSON.stringify(json), (err) => {
+        if (err) {
+            console.error(err);
+            return;
+        };
+        console.log(`Your quality report is available at ${fileName}`);
+    });
+}
 
-//         // validateTruncation(); //handles 4)
-//         validateOverlappingImages(annotation, taskId); //handles 5)
-//     })
-// }
-
-
-
-
-
-// Expects the JSON format from the GET /v1/tasks endpoint
-// getTaskResponsesFromLocalJson = () => {
-//     let erroredTasksQualityReport = [];
-//     let completedTaskQualityReport = [];
-//     allTasks = localTaskResponses.docs;
-//     tasksWithResponses = allTasks.filter(task=>task.status === "completed" || task.status === "error");
-//     tasksWithResponses.forEach(task=>{
-//         if(task.status === "completed"){
-//             completedTaskQualityReport.push(buildCompletedJsonReportBody(task));
-//         }else{
-//             erroredTasksQualityReport.push(buildErroredJsonReportBody(task));
-//         }
-//     })
-//     const qualityReportBody = new QualityReportBody(erroredTasksQualityReport, completedTaskQualityReport)
-//     console.log("Errored Tasks: ", qualityReportBody);
-// }
-
-//Prompt:  Welcome to the Qaulity Report script. Do you want to fetch reports from Scale or provide hard coded JSON?  (enter: Scale or JSON)
-//if Scale
-getTaskResponsesFromScale();//inputs should include queries
-//if JSON
-//getTaskResponsesFromLocalJson();
-
-// Focus on the truncation value and the left, top, width, and height values.  
-// Truncation is how far off the screen an item is.  left and top are the disctnace in pixels between the bounding box and end of image
-// width and height are of the bounding box.
+qualityCheck();//This invocation runs the whole script.
+// let jsonBody = await qualityCheck();
+// console.log("json body", jsonBody)
+// writeToLocalJsonFile((async () => {return await })());
+//TODO: inputs should allow for queries of api by date
+//TODO: impliment rate limiting so as not overload the api
 
 //1) Max size check - throw a warn if H or W exceed 100
 // Possible Quality check item for 5f127f5f3a6b100017232099 - https://dashboard.scale.com/audit?taskId=5f127f5f3a6b100017232099
