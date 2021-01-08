@@ -1,3 +1,15 @@
+//*********************************************************************************
+// To run set 'SCALE_API_KEY' as an environment variable and type 'node qualityCheck' in the console.
+// The output will be saved as a local JSON file named 'qualityReport.json'
+//
+// NOTE: This script pages through all tasks in a given Scale acount, with a 5 second wait between each call, 
+// until a `next_token` is no longer returned.
+//
+//TODO: Add checking for truncation values
+//TODO: Add checking for occlusion values
+//TODO: Inputs should allow for querying the API by created_at and completed_at timestamps, as well as, type, batch, and project.
+//*********************************************************************************
+
 const scaleapi = require('scaleapi');
 const fs = require("fs");
 const client = scaleapi.ScaleClient(process.env['SCALE_API_KEY']);
@@ -136,8 +148,4 @@ writeToLocalJsonFile = (json) => {
 }
 
 qualityCheck();//This invocation runs the whole script.
-//TODO: add checking for truncation values
-//TODO: add checking for occlusion values
-//TODO: inputs should allow for queries of api by created_at and completed_at timestamps to limit results coming back.  As well as type, batch, and project.
-    // sample values "created_at": "2016-06-23T08:51:13.903Z" / "completed_at": "2016-06-23T09:09:10.108Z"
 
