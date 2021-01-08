@@ -59,7 +59,7 @@ qualityCheck = async () => {
             const staticAnnotation = taskAnnotations[i]
             // Search for annotations that are the same size and create warnings.
             findSameSizeAnnotations(staticAnnotation, taskAnnotations, i, annotationsWarningsWithMatchingSize);
-            // Search for Traffic Control Sign annotations that have a color that is not "other" or "not_applicable"
+            // Search for Traffic Control Sign annotations that have a color that is not "other" or "not_applicable" and creat warnings.
             validateTrafficControlColor(staticAnnotation, annotationWarningsTrafficControlColor);
             // Search for the annotations that exceed minimum and max values and create either errors or warnings.
             findMinAndMaxBoxSizeAnnotations(staticAnnotation, annotationErrorsThatExceedMaxAndMinSize, annotationWarningsThatExceedMaxAndMinSize); 
