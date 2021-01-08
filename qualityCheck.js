@@ -1,7 +1,7 @@
 const scaleapi = require('scaleapi');
 const fs = require("fs");
 const client = scaleapi.ScaleClient(process.env['SCALE_API_KEY']);
-const QualityReportTaskItem = require('./QualityReportTaskItem');
+const QualityReportTaskItem = require('./classes/QualityReportTaskItem');
 
 getTasksFromScale = async (nextToken) => {
     let completedTaskResponses = [];
@@ -79,15 +79,6 @@ findSameSizeAnnotations = (staticAnnotation, taskAnnotations, i, annotationsWarn
     }
 }
 
-//functions call in findSameSizeAnnotations()
-isBoxSameSize = (itterableAnnotation, staticAnnotation) => {
-    return itterableAnnotation.width === staticAnnotation.width && itterableAnnotation.height == staticAnnotation.height;
-}
-
-boxHasAlreadyBeenFound = (annotation, annotationsWarningsWithMatchingSize) => {
-    return annotationsWarningsWithMatchingSize.indexOf(annotation) > -1
-}
-
 findMinAndMaxBoxSizeAnnotations = (annotation, annotationErrorsThatExceedMaxAndMinSize, annotationWarningsThatExceedMaxAndMinSize) => {
         const width = annotation.width;
         const height = annotation.height;
@@ -106,6 +97,7 @@ findMinAndMaxBoxSizeAnnotations = (annotation, annotationErrorsThatExceedMaxAndM
 };
 
 validateTrafficControlColor = (annotation, annotationWarningsTrafficControlColor) => {
+    // Validate the traffic_control_sign attribute for a color
     if(annotation.label === 'traffic_control_sign'){
         const color = annotation.attributes.background_color;
         if(color != 'not_applicable' && color != 'other'){
@@ -122,6 +114,16 @@ validateOcclusion = () => {
     //TODO: validate that occlusion values are practical given x/y and width/height values
 }
 
+
+// Functions called in findSameSizeAnnotations()
+isBoxSameSize = (itterableAnnotation, staticAnnotation) => {
+    return itterableAnnotation.width === staticAnnotation.width && itterableAnnotation.height == staticAnnotation.height;
+}
+
+boxHasAlreadyBeenFound = (annotation, annotationsWarningsWithMatchingSize) => {
+    return annotationsWarningsWithMatchingSize.indexOf(annotation) > -1
+}
+
 writeToLocalJsonFile = (json) => {
     const fileName = "./qualityReport.json";
     fs.writeFile(fileName, JSON.stringify(json), (err) => {
@@ -134,9 +136,8 @@ writeToLocalJsonFile = (json) => {
 }
 
 qualityCheck();//This invocation runs the whole script.
-//TODO: inputs should allow for queries of api by date
-    // sample values "created_at": "2016-06-23T08:51:13.903Z" / "completed_at": "2016-06-23T09:09:10.108Z"
-//TODO: impliment rate limiting so we don't overload the api
-    // use 
 //TODO: add checking for truncation values
 //TODO: add checking for occlusion values
+//TODO: inputs should allow for queries of api by created_at and completed_at timestamps to limit results coming back.  As well as type, batch, and project.
+    // sample values "created_at": "2016-06-23T08:51:13.903Z" / "completed_at": "2016-06-23T09:09:10.108Z"
+
